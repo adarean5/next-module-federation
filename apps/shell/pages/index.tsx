@@ -1,12 +1,10 @@
 import dynamic from "next/dynamic";
 
-// @ts-ignore
-const MicroFrontendOne = dynamic(() => import("mfOne/root"), {
+const MicroFrontendOne = dynamic(() => import("@mfe/mfOne/root"), {
   ssr: false,
 });
 
-// @ts-ignore
-const SampleButtonMF1 = dynamic(() => import("mfOne/sampleButton"));
+const SampleButtonMF1 = dynamic(() => import("@mfe/mfOne/sampleButton"));
 
 export default function Home() {
   return (
